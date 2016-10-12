@@ -31,7 +31,7 @@ function configSlides() {
       transition: 'linear',
       slideNumber: true,
       start_slideshow_at: 'beginning',
-      scroll: false,
+      scroll: true,
   };
 
   var config_section = new configmod.ConfigSection('livereveal',

@@ -393,6 +393,7 @@ function buttonHelp() {
         .css('bottom','0.5em')
         .css('left','0.6em')
         .css('opacity', '0.6')
+        .css('z-index', '30')
         .click(
             function(){
                 KeysMessager();
@@ -411,12 +412,28 @@ function buttonExit() {
         .css('top','0.5em')
         .css('left','0.48em')
         .css('opacity', '0.6')
+        .css('z-index', '30')
         .click(
             function(){
                 revealMode('simple', 'zoom');
             }
         );
     $('.reveal').after(exit_button);
+}
+
+function logo() {
+    var my_logo = $('<img/>')
+        .attr('id','logo')
+        .attr('title','Klarismo logo')
+        .addClass('my-main-tool-bar')
+        .css('position','fixed')
+        .css('top','0.5em')
+        .css('right','0.48em')
+        .css('opacity', '0.6')
+        .css('z-index', '30')
+        .attr('src', require.toUrl("./logo.svg"))
+        .attr('width','100');
+    $('.reveal').after(my_logo);
 }
 
 function Remover(config) {
@@ -479,8 +496,9 @@ function revealMode() {
     Revealer(config);
     // Minor modifications for usability
     setupKeys("reveal_mode");
-    buttonExit();
-    buttonHelp();
+    //buttonExit();
+    //buttonHelp();
+    logo();
     $('#maintoolbar').addClass('reveal_tagging');
   } else {
     Remover(config);
@@ -508,6 +526,10 @@ function setup() {
     if (event.which == 82 && event.altKey) {
       revealMode();
       return false;
+    }
+    if (event.which == 72 && event.altKey) {
+      KeysMessager();
+      return true;
     }
     return true;
   };

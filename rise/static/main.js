@@ -28,7 +28,7 @@ function configSlides() {
       height: 855, // 4:3 ratio
       minScale: 1.0, //we need this for codemirror to work right
       theme: 'simple',
-      transition: 'linear',
+      transition: 'none',
       slideNumber: true,
       start_slideshow_at: 'beginning',
       scroll: true,

@@ -24,8 +24,8 @@ function configSlides() {
       controls: true,
       progress: true,
       history: true,
-      width: 1140,
-      height: 855, // 4:3 ratio
+      width: '100%',
+      height: '100%',
       minScale: 1.0, //we need this for codemirror to work right
       theme: 'simple',
       transition: 'none',

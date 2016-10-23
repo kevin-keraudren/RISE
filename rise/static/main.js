@@ -230,7 +230,9 @@ function Revealer(config) {
            './reveal.js/js/reveal.js'].map(require.toUrl),function(){
     // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
 
-    Reveal.initialize();
+    Reveal.initialize({
+                          center: false,
+                      });
 
     var options = {
     controls: config.get_sync('controls'),
